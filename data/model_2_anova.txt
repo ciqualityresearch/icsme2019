@@ -1,0 +1,12 @@
+Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: test_ratio
+                         Chisq Df Pr(>Chisq)    
+(Intercept)            58.0176  1  2.598e-14 ***
+totalCommits           11.8034  1  0.0005912 ***
+testChangesPerCommit    5.0549  1  0.0245569 *  
+countCommitsWithTests   7.0145  1  0.0080854 ** 
+totalCommitters         4.7638  1  0.0290636 *  
+version:project       461.4989 82  < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
