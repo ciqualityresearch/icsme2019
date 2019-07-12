@@ -140,11 +140,8 @@
                     and NOCI projects?                  
                     <br><br>                    
                     <b>RQ2:</b> Is there an association between the adoption of CI and the evolution of code test ratio?
-                  
                     <br><br>                    
-                    <b>RQ3:</b> Is there an association between the adoption of CI and the evolution of test coverage?   
-                    
-                    
+                    <b>RQ3:</b> Is there an association between the adoption of CI and the evolution of test coverage?
                     <br><br>                    
                     <b>RQ4:</b> What are the most important factors to model test
                     ratio?                   
@@ -178,14 +175,37 @@
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-8 col-lg-offset-2 text-center">
+            	<div class="col-lg-8 col-lg-offset-2 text-center" id="rq1">
                     <p>Here we present the results for each RQ that we address.
                     <br><br>
-                    <p class="text-justify">
-                    <b>RQ1 - What are the evolution trends of test ratio within CI and NOCI projects?</b>
+                    <p class="text-justify" id="rq1">
+                    <b>RQ1 - What are the evolution trends of test ratio within CI and NOCI projects?</b> We find that 40.2% of the CI projects have a rising test ratio (i.e., the proportion of test code in a project) trend while only 17% of the NOCI have a rising test ratio trend, as shown in the table below.
                     <br>
-                    <br>
-                    We find that 40.2% of the CI projects have a rising test ratio (i.e., the proportion of test code in a project) trend while only 17% of the NOCI have a rising test ratio trend.
+                    <table class="table table-striped table-condensed">
+                    <caption>Sum of projects in clusters</caption>
+                    <thead>
+                    <tr class="header">
+                    <th style="text-align: left;"></th>
+                    <th style="text-align: left;"><strong>Decreasing</strong></th>
+                    <th style="text-align: left;"><strong>Maintaining</strong></th>
+                    <th style="text-align: left;"><strong>Raising</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                    <td style="text-align: left;"><strong>CI</strong></td>
+                    <td style="text-align: left;">0</td>
+                    <td style="text-align: left;">49</td>
+                    <td style="text-align: left;">33</td>
+                    </tr>
+                    <tr class="even">
+                    <td style="text-align: left;"><strong>NOCI</strong></td>
+                    <td style="text-align: left;">0</td>
+                    <td style="text-align: left;">68</td>
+                    <td style="text-align: left;">14</td>
+                    </tr>
+                    </tbody>
+                    </table>
                     <br><br>
                     </p>
                     <!-- <p class="text-center">
@@ -193,32 +213,31 @@
                             <i class="fa fa-search-plus fa-1x"></i> <b>RQ1: See Mann-Whitney-Wilcoxon test result and Cliff's delta values</b>
                         </a>
                     </p> -->
-                    <p class="text-justify">
+                    <p class="text-justify" id="rq2">
                     <!-- <br><br>                     -->
-                    <b>RQ2 - Is there an association between the adoption of CI and the evolution of code test ratio?</b>
-                    <br>
-                    <br>
-                    We observe that the adoption of CI is associated with a consistent growth of test ratio, whereas NOCI projects have a negligible change of test ratio overtime.
+                    <b>RQ2 - Is there an association between the adoption of CI and the evolution of code test ratio?</b> We observe that the adoption of CI is associated with a consistent growth of test ratio, whereas NOCI projects have a negligible change of test ratio overtime.
                     <br><br>
                     </p>
                                         
-                    <p class="text-justify">
-                    <b>RQ3 - Is there an association between the adoption of CI and the evolution of test coverage?</b>
-                    <br><br>
-                    Our analysis shows statistical evidences that most of the analyzed CI projects tend to increase or maintain the test coverage (9 out of 10 projects), while NOCI projects show a different tendency (5 out of 10 projects increase or maintain the test coverage. In fact, NOCI projects have  more projects  decreasing  the coverage  (5 projects) when compared to CI projects (1 project).
-                    <br><br>
+                    <p class="text-justify" id="rq3">
+                    <b>RQ3 - Is there an association between the adoption of CI and the evolution of test coverage?</b> Our analysis shows statistical evidences that most of the analyzed CI projects tend to increase or maintain the test coverage (9 out of 10 projects), while NOCI projects show a different tendency (5 out of 10 projects increase or maintain the test coverage. In fact, NOCI projects have  more projects  decreasing  the coverage  (5 projects) when compared to CI projects (1 project).
                     </p>
-
-                    <p class="text-justify">
-                    <b>RQ4 - What are the most important factors to model test ratio?</b>
-                    <br><br>
-                    Our mixed-effect models reveals that test ratio is largely explained  by  the  project  inherent  context (nearly 84% to 88% of the explanatory power) rather  than by the code or process factors.
-                    </p>
-                    <!-- <p class="text-center">
-                        <a href="#rq3-r-squared-and-optimism" class="btn btn-success portfolio-link" data-toggle="modal">
-                            <i class="fa fa-search-plus fa-1x"></i> <b>RQ3: R² and R² optimism</b>
+                    <p class="text-center">
+                        <a href="#projects-coverage-tests" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>See the summary of the statistical test results</b>
                         </a>
                     </p>
+                    <br><br>
+
+                    <p class="text-justify" id="rq4">
+                    <b>RQ4 - What are the most important factors to model test ratio?</b> Our mixed-effect models reveals that test ratio is largely explained  by  the  project  inherent  context (nearly 84% to 88% of the explanatory power) rather  than by the code or process factors.
+                    </p>
+                    <p class="text-center">
+                        <a href="#models-details" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i><b> See the Anova Tables and the coefficients for our linear mixed-effects regression</b>
+                        </a>
+                    </p>
+                    <!--
                     <br>
                     <p class="text-center">
                         <a href="#rq3-variables-explanatory-power" class="btn btn-success portfolio-link" data-toggle="modal">
@@ -248,63 +267,135 @@
                     </p>
                     <br>
                 </div>
-                
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <br>
-                    <p>
-                    Use the links below to <b>download our CI and NOCI Projects Dataset</b> and their respective meta-data in a format of a CSV document.
-                    </p>                    
-                </div>
-                <div class="col-lg-12 text-center">
-                    <a href="data/CI Projects Dataset.csv" class="btn btn-success">
-                        <i class="glyphicon glyphicon-download"></i> <b>Download the CI Projects Dataset</b>
-                    </a>
-                    <a href="data/NOCI Projects Dataset.csv" class="btn btn-success">
-                        <i class="glyphicon glyphicon-download"></i> <b>Download the NOCI Projects Dataset</b>
-                    </a>
-                </div>
 
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <br>
-                    <p>
-                    Use the links below to <b>download the projects versions size (i.e., production lines, test lines and test ratio)</b> for CI and NOCI projects in a format of a CSV document.
-                    </p>                    
-                </div>
-                <div class="col-lg-12 text-center">
-                    <a href="data/projects-size-CI.csv" class="btn btn-success">
-                        <i class="glyphicon glyphicon-download"></i> <b>Download the CI projects size</b>
-                    </a>
-                    <a href="data/projects-size-NOCI.csv" class="btn btn-success">
-                        <i class="glyphicon glyphicon-download"></i> <b>Download the NOCI projects size</b>
-                    </a>
-                </div>
+                <section id="ci-noci-datasets">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <h3>CI and NOCI Projects Dataset</h3>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <p class="text-justify">
+                            To perform our experiments, we analyze two groups of projects: (i) 82 open source
+                            projects that have adopted CI at some point of their lifetime (CI projects) and
+                            (ii) 82 open source projects that have never adopted CI during their lifetime
+                            (NOCI projects). Below we show a table with the summary of our CI and NOCI projects per programming language, followed by the links to download the datasets in CSV documents. 
+                        </p>
+                        <table class="table table-striped table-condensed">
+                            <caption>Projects Summary</caption>
+                            <thead>
+                            <tr class="header">
+                            <th style="text-align: center;"></th>
+                            <th style="text-align: center;"><strong>JavaScript</strong></th>
+                            <th style="text-align: center;"><strong>Java</strong></th>
+                            <th style="text-align: center;"><strong>Ruby</strong></th>
+                            <th style="text-align: center;"><strong>PHP</strong></th>
+                            <th style="text-align: center;"><strong>Python</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="odd">
+                            <td style="text-align: center;"><strong>CI</strong></td>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">22</td>
+                            </tr>
+                            <tr class="even">
+                            <td style="text-align: center;"><strong>NOCI</strong></td>
+                            <td style="text-align: center;">46</td>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">12</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <p class="text-center">
+                        Use the links below to <b>download our CI and NOCI Projects Dataset</b> and their respective meta-data in a format of a CSV document.
+                        </p>                    
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a href="data/CI Projects Dataset.csv" class="btn btn-success">
+                            <i class="glyphicon glyphicon-download"></i> <b>Download the CI Projects Dataset</b>
+                        </a>
+                        <a href="data/NOCI Projects Dataset.csv" class="btn btn-success">
+                            <i class="glyphicon glyphicon-download"></i> <b>Download the NOCI Projects Dataset</b>
+                        </a>
+                    </div>
+                </section>
 
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <br>
-                    <p>
-                    Use the links below to <b>download the projects versions coverage</b> for CI and NOCI projects in a format of a CSV document.
-                    </p>                    
-                </div>
-                <div class="col-lg-12 text-center">
-                    <a href="data/coverage_CI.csv" class="btn btn-success">
-                        <i class="glyphicon glyphicon-download"></i> <b>Download the CI projects coverage</b>
-                    </a>
-                    <a href="data/coverage_NOCI.csv" class="btn btn-success">
-                        <i class="glyphicon glyphicon-download"></i> <b>Download the NOCI projects coverage</b>
-                    </a>
-                </div>
+                <section id="projects-versions">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <br><br><br>
+                        <h3>Code size of projects</h3>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <p class="text-justify">
+                                Our analyses consider the valid lines (i.e, excluding the comment and blank lines) to count the overall code and test lines of a project. Using these two metrics (i.e., all lines and test lines), we compute the <b>test ratio</b>, which is defined by test_lines/all_lines fraction. 
+                        </p>
+                        <br>
+                        <p>
+                        Use the links below to <b>download the projects versions size (i.e., production lines, test lines and test ratio)</b> for CI and NOCI projects in a format of a CSV document.
+                        </p>                    
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a href="data/projects-size-CI.csv" class="btn btn-success">
+                            <i class="glyphicon glyphicon-download"></i> <b>Download the CI projects size</b>
+                        </a>
+                        <a href="data/projects-size-NOCI.csv" class="btn btn-success">
+                            <i class="glyphicon glyphicon-download"></i> <b>Download the NOCI projects size</b>
+                        </a>
+                    </div>
+                </section>
 
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <br>
-                    <p>
-                    Use the link below to <b>download the projects versions commits statistics</b> for the CI projects.
-                    </p>                    
-                </div>
-                <div class="col-lg-12 text-center">
-                    <a href="data/versions_transitions_statistics.csv" class="btn btn-success">
-                        <i class="glyphicon glyphicon-download"></i> <b>Download the CI projects commits statistics</b>
-                    </a>
-                </div>
+
+
+                <section id="projects-coverages">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <br><br><br>
+                        <h3>Projects Test Coverage</h3>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <p class="text-justify">
+                                We randomly select 10 CI projects and 10 NOCI and collected 24 versions of each one (a total of 480 versions). Therefore, we further build and run the tests of each of these versions to obtain the test coverage dataset.
+                        </p>
+                        <br>
+                        <p>
+                            Use the links below to <b>download the projects versions coverage</b> for CI and NOCI projects in a format of a CSV document.
+                        </p>                    
+                    </div>
+
+                    <div class="col-lg-12 text-center">
+                        <a href="data/coverage_CI.csv" class="btn btn-success">
+                            <i class="glyphicon glyphicon-download"></i> <b>Download the CI projects coverage</b>
+                        </a>
+                        <a href="data/coverage_NOCI.csv" class="btn btn-success">
+                            <i class="glyphicon glyphicon-download"></i> <b>Download the NOCI projects coverage</b>
+                        </a>
+                    </div>
+                </section>
+
+                <section id="projects-coverages">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <br><br><br>
+                        <h3>Projects Commit Factors</h3>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <p class="text-justify">
+                                We retrieve the git commit history and extract a set of factors, which capture aspects for the projects' evolution (e.g., size, frequency, and nature of the changes).
+                        </p>
+                        <br>
+                        <p>
+                            Use the link below to <b>download the projects versions commits statistics</b> for the CI projects.
+                        </p>                    
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a href="data/versions_transitions_statistics.csv" class="btn btn-success">
+                            <i class="glyphicon glyphicon-download"></i> <b>Download the CI projects commits statistics</b>
+                        </a>
+                    </div>
+                </section>
             </div>
         </div>
     </section>    
@@ -324,7 +415,7 @@
 
 
     <!-- Modals -->
-    <!-- <div class="portfolio-modal modal fade" id="studied-projects" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="models-details" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -336,20 +427,189 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h3>Projects Information</h3>
+                            <h3>Mixed-effects regression for Model I & II</h3>
                             <hr class="star-primary">
-                            <p>The table below shows the full name of each project of our database and informations regarding the number of released pull requests associated with such projects.</p>
+                            <p>Below we show the Anova Tables and the coefficients for our linear mixed-effects regression. We call <b>Model I</b> the model that fits the period before the adoption of CI and <b>Model II</b> the model that fits the period after the adoption of CI.</p>
                             <div id='projects-information'>
-                                <table class="table table-striped table-condensed datatable" id="projects-information-table"><thead><tr><th>#</th><th>Project</th><th>Language</th><th>PRs before CI</th><th>PRs after CI</th><th>Total of PRs </th></tr></thead><tbody><tr><td>1</td><td>Yelp/mrjob</td><td>Python</td><td>168</td><td>274</td><td>442</td></tr><tr><td>2</td><td>yiisoft/yii</td><td>PHP</td><td>148</td><td>644</td><td>792</td></tr><tr><td>3</td><td>roots/sage</td><td>PHP</td><td>282</td><td>156</td><td>438</td></tr><tr><td>4</td><td>vanilla/vanilla</td><td>PHP</td><td>112</td><td>988</td><td>1100</td></tr><tr><td>5</td><td>processing/p5.js</td><td>JavaScript</td><td>100</td><td>334</td><td>434</td></tr><tr><td>6</td><td>bokeh/bokeh</td><td>Python</td><td>134</td><td>1417</td><td>1551</td></tr><tr><td>7</td><td>serverless/serverless</td><td>JavaScript</td><td>285</td><td>491</td><td>776</td></tr><tr><td>8</td><td>craftyjs/Crafty</td><td>JavaScript</td><td>305</td><td>129</td><td>434</td></tr><tr><td>9</td><td>invoiceninja/invoiceninja</td><td>JavaScript</td><td>286</td><td>143</td><td>429</td></tr><tr><td>10</td><td>scikit-image/scikit-image</td><td>Python</td><td>219</td><td>859</td><td>1078</td></tr><tr><td>11</td><td>dropwizard/dropwizard</td><td>Java</td><td>157</td><td>560</td><td>717</td></tr><tr><td>12</td><td>androidannotations/androidannotations</td><td>Java</td><td>215</td><td>198</td><td>413</td></tr><tr><td>13</td><td>aframevr/aframe</td><td>JavaScript</td><td>124</td><td>254</td><td>378</td></tr><tr><td>14</td><td>jashkenas/backbone</td><td>JavaScript</td><td>252</td><td>450</td><td>702</td></tr><tr><td>15</td><td>openhab/openhab</td><td>Java</td><td>1008</td><td>506</td><td>1514</td></tr><tr><td>16</td><td>bcit-ci/CodeIgniter</td><td>PHP</td><td>286</td><td>559</td><td>845</td></tr><tr><td>17</td><td>mizzy/serverspec</td><td>Ruby</td><td>100</td><td>256</td><td>356</td></tr><tr><td>18</td><td>spinnaker/spinnaker</td><td>Python</td><td>211</td><td>157</td><td>368</td></tr><tr><td>19</td><td>sensu/sensu</td><td>Ruby</td><td>229</td><td>473</td><td>702</td></tr><tr><td>20</td><td>cython/cython</td><td>Python</td><td>104</td><td>256</td><td>360</td></tr><tr><td>21</td><td>buildbot/buildbot</td><td>Python</td><td>111</td><td>913</td><td>1024</td></tr><tr><td>22</td><td>jsbin/jsbin</td><td>JavaScript</td><td>158</td><td>516</td><td>674</td></tr><tr><td>23</td><td>siacs/Conversations</td><td>Java</td><td>211</td><td>113</td><td>324</td></tr><tr><td>24</td><td>photonstorm/phaser</td><td>JavaScript</td><td>163</td><td>504</td><td>667</td></tr><tr><td>25</td><td>fchollet/keras</td><td>Python</td><td>118</td><td>211</td><td>329</td></tr><tr><td>26</td><td>robolectric/robolectric</td><td>Java</td><td>204</td><td>735</td><td>939</td></tr><tr><td>27</td><td>TelescopeJS/Telescope</td><td>JavaScript</td><td>156</td><td>141</td><td>297</td></tr><tr><td>28</td><td>andypetrella/spark-notebook</td><td>JavaScript</td><td>150</td><td>143</td><td>293</td></tr><tr><td>29</td><td>apache/incubator-airflow</td><td>Python</td><td>220</td><td>390</td><td>610</td></tr><tr><td>30</td><td>ReactiveX/RxJava</td><td>Java</td><td>736</td><td>662</td><td>1398</td></tr><tr><td>31</td><td>driftyco/ng-cordova</td><td>JavaScript</td><td>115</td><td>175</td><td>290</td></tr><tr><td>32</td><td>haraka/Haraka</td><td>JavaScript</td><td>328</td><td>600</td><td>928</td></tr><tr><td>33</td><td>isagalaev/highlight.js</td><td>JavaScript</td><td>105</td><td>158</td><td>263</td></tr><tr><td>34</td><td>bundler/bundler</td><td>Ruby</td><td>193</td><td>410</td><td>603</td></tr><tr><td>35</td><td>humhub/humhub</td><td>PHP</td><td>114</td><td>138</td><td>252</td></tr><tr><td>36</td><td>square/picasso</td><td>Java</td><td>110</td><td>115</td><td>225</td></tr><tr><td>37</td><td>Netflix/Hystrix</td><td>Java</td><td>146</td><td>438</td><td>584</td></tr><tr><td>38</td><td>dropwizard/metrics</td><td>Java</td><td>121</td><td>102</td><td>223</td></tr><tr><td>39</td><td>refinery/refinerycms</td><td>Ruby</td><td>497</td><td>427</td><td>924</td></tr><tr><td>40</td><td>gollum/gollum</td><td>JavaScript</td><td>116</td><td>104</td><td>220</td></tr><tr><td>41</td><td>jhipster/generator-jhipster</td><td>JavaScript</td><td>107</td><td>1243</td><td>1350</td></tr><tr><td>42</td><td>mapbox/mapbox-gl-js</td><td>JavaScript</td><td>106</td><td>105</td><td>211</td></tr><tr><td>43</td><td>request/request</td><td>JavaScript</td><td>151</td><td>395</td><td>546</td></tr><tr><td>44</td><td>alohaeditor/Aloha-Editor</td><td>JavaScript</td><td>270</td><td>198</td><td>468</td></tr><tr><td>45</td><td>boto/boto</td><td>Python</td><td>205</td><td>715</td><td>920</td></tr><tr><td>46</td><td>grails/grails-core</td><td>Java</td><td>298</td><td>165</td><td>463</td></tr><tr><td>47</td><td>Pylons/pyramid</td><td>Python</td><td>138</td><td>1198</td><td>1336</td></tr><tr><td>48</td><td>mantl/mantl</td><td>Python</td><td>313</td><td>147</td><td>460</td></tr><tr><td>49</td><td>ether/etherpad-lite</td><td>JavaScript</td><td>317</td><td>602</td><td>919</td></tr><tr><td>50</td><td>jashkenas/underscore</td><td>JavaScript</td><td>118</td><td>331</td><td>449</td></tr><tr><td>51</td><td>apereo/cas</td><td>Java</td><td>227</td><td>673</td><td>900</td></tr><tr><td>52</td><td>kivy/kivy</td><td>Python</td><td>157</td><td>1135</td><td>1292</td></tr><tr><td>53</td><td>elastic/logstash</td><td>Ruby</td><td>458</td><td>446</td><td>904</td></tr><tr><td>54</td><td>getsentry/sentry</td><td>Python</td><td>121</td><td>1051</td><td>1172</td></tr><tr><td>55</td><td>hapijs/hapi</td><td>JavaScript</td><td>400</td><td>469</td><td>869</td></tr><tr><td>56</td><td>HabitRPG/habitica</td><td>JavaScript</td><td>177</td><td>983</td><td>1160</td></tr><tr><td>57</td><td>pyrocms/pyrocms</td><td>PHP</td><td>278</td><td>446</td><td>724</td></tr><tr><td>58</td><td>BabylonJS/Babylon.js</td><td>JavaScript</td><td>259</td><td>566</td><td>825</td></tr><tr><td>59</td><td>Leaflet/Leaflet</td><td>JavaScript</td><td>290</td><td>874</td><td>1164</td></tr><tr><td>60</td><td>laravel/laravel</td><td>PHP</td><td>300</td><td>498</td><td>798</td></tr><tr><td>61</td><td>zurb/foundation-sites</td><td>JavaScript</td><td>479</td><td>1163</td><td>1642</td></tr><tr><td>62</td><td>callemall/material-ui</td><td>JavaScript</td><td>350</td><td>1323</td><td>1673</td></tr><tr><td>63</td><td>loomio/loomio</td><td>Ruby</td><td>366</td><td>1420</td><td>1786</td></tr><tr><td>64</td><td>scikit-learn/scikit-learn</td><td>Python</td><td>323</td><td>1489</td><td>1812</td></tr><tr><td>65</td><td>frappe/erpnext</td><td>Python</td><td>232</td><td>1791</td><td>2023</td></tr><tr><td>66</td><td>Theano/Theano</td><td>Python</td><td>616</td><td>1882</td><td>2498</td></tr><tr><td>67</td><td>puppetlabs/puppet</td><td>Ruby</td><td>247</td><td>3008</td><td>3255</td></tr><tr><td>68</td><td>chef/chef</td><td>Ruby</td><td>103</td><td>1667</td><td>1770</td></tr><tr><td>69</td><td>woocommerce/woocommerce</td><td>PHP</td><td>1334</td><td>1147</td><td>2481</td></tr><tr><td>70</td><td>divio/django-cms</td><td>Python</td><td>131</td><td>1909</td><td>2040</td></tr><tr><td>71</td><td>scipy/scipy</td><td>Python</td><td>287</td><td>1612</td><td>1899</td></tr><tr><td>72</td><td>matplotlib/matplotlib</td><td>Python</td><td>396</td><td>2074</td><td>2470</td></tr><tr><td>73</td><td>sympy/sympy</td><td>Python</td><td>792</td><td>2316</td><td>3108</td></tr><tr><td>74</td><td>twbs/bootstrap</td><td>JavaScript</td><td>126</td><td>1824</td><td>1950</td></tr><tr><td>75</td><td>AnalyticalGraphicsInc/cesium</td><td>JavaScript</td><td>515</td><td>547</td><td>1062</td></tr><tr><td>76</td><td>elastic/kibana</td><td>JavaScript</td><td>235</td><td>1681</td><td>1916</td></tr><tr><td>77</td><td>mozilla/pdf.js</td><td>JavaScript</td><td>1029</td><td>1872</td><td>2901</td></tr><tr><td>78</td><td>appcelerator/titanium_mobile</td><td>JavaScript</td><td>5316</td><td>1265</td><td>6581</td></tr><tr><td>79</td><td>TryGhost/Ghost</td><td>JavaScript</td><td>299</td><td>2275</td><td>2574</td></tr><tr><td>80</td><td>fog/fog</td><td>Ruby</td><td>479</td><td>1694</td><td>2173</td></tr><tr><td>81</td><td>ansible/ansible</td><td>Python</td><td>3150</td><td>1462</td><td>4612</td></tr><tr><td>82</td><td>ipython/ipython</td><td>Python</td><td>504</td><td>3272</td><td>3776</td></tr><tr><td>83</td><td>cakephp/cakephp</td><td>PHP</td><td>287</td><td>3653</td><td>3940</td></tr><tr><td>84</td><td>owncloud/core</td><td>PHP</td><td>2676</td><td>5936</td><td>8612</td></tr><tr><td>85</td><td>rails/rails</td><td>Ruby</td><td>525</td><td>9866</td><td>10391</td></tr><tr><td>86</td><td>mozilla-b2g/gaia</td><td>JavaScript</td><td>4369</td><td>17690</td><td>22059</td></tr><tr><td>87</td><td>saltstack/salt</td><td>Python</td><td>457</td><td>19366</td><td>19823</td></tr></tbody></table>
+                                <div style="width: 49%; float: left;">
+                                    <h4>Model I</h4>
+                                    <img src="./data/model1.png" style="width: 100%; margin: 10px;"/>
+                                    <a href="data/model_1_coefficients.csv" class="btn btn-success">
+                                        <i class="glyphicon glyphicon-download"></i> <b>Download Model I coefficients as CSV document</b>
+                                    </a>
+                                </div>
+                                <div style="width: 49%; float: right;">
+                                    <h4>Model II</h4>
+                                    <img src="./data/model1.png" style="width: 100%; margin: 10px;" />
+                                    <a href="data/model_2_coefficients.csv" class="btn btn-success">
+                                        <i class="glyphicon glyphicon-download"></i> <b>Download Model II coefficients as CSV document</b>
+                                    </a>
+                                </div>
                             </div>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <br style="clear: both;">
+                            <br style="clear: both;">
+                            <div >
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-
+    </div>
+    
+    <div class="portfolio-modal modal fade" id="projects-coverage-tests" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3>Projects Coverage Tests</h3>
+                            <hr class="star-primary">
+                            <p>The table below shows the statistical tests results of the coverage comparison of the projects periods (before-CI/after-CI and early-NOCI and late-NOCI).</p>
+                            <div id='projects-information'>
+                                <div style="width: 49%; float: left;">
+                                    <table class="table table-striped table-condensed">
+                                    <thead>
+                                    <tr class="header" style="background-color: gray;">
+                                    <th style="text-align: center;"><strong>NOCI projects</strong></th>
+                                    <th style="text-align: right;"><strong>MWW <span class="math inline">p-value</span></strong></th>
+                                    <th style="text-align: right;"><strong>Cliff’s delta</strong></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="odd" style="background-color: #0cc50c;">
+                                    <td style="text-align: center;">velocity</td>
+                                    <td style="text-align: right;"><span class="math inline">0.0001185</span></td>
+                                    <td style="text-align: right;"><span class="math inline">-0.8680556 (large)</span></td>
+                                    </tr>
+                                    <tr class="even" style="background-color: #ff1f1f;">
+                                    <td style="text-align: center;">jsrender</td>
+                                    <td style="text-align: right;"><span class="math inline">0.9998</span></td>
+                                    <td style="text-align: right;"><span class="math inline">0.8263889 (large)</span></td>
+                                    </tr>
+                                    <tr class="odd" style="background-color: #ff1f1f;">
+                                    <td style="text-align: center;">SlickGrid</td>
+                                    <td style="text-align: right;"><span class="math inline">0.9998</span></td>
+                                    <td style="text-align: right;"><span class="math inline">0.8541667 (large)</span></td>
+                                    </tr>
+                                    <tr class="even" style="background-color: #0cc50c;">
+                                    <td style="text-align: center;">explainshell</td>
+                                    <td style="text-align: right;"><span class="math inline">0.0009023</span></td>
+                                    <td style="text-align: right;"><span class="math inline">-0.6944444 (large)</span></td>
+                                    </tr>
+                                    <tr class="odd" style="background-color: #0cc50c;">
+                                    <td style="text-align: center;">bup</td>
+                                    <td style="text-align: right;"><span class="math inline">1.369e-05</span></td>
+                                    <td style="text-align: right;"><span class="math inline">-1 (large)</span></td>
+                                    </tr>
+                                    <tr class="even" style="background-color: #ff1f1f;">
+                                    <td style="text-align: center;">netty-socketio</td>
+                                    <td style="text-align: right;"><span class="math inline">1</span></td>
+                                    <td style="text-align: right;"><span class="math inline">1 (large)</span></td>
+                                    </tr>
+                                    <tr class="odd" style="background-color: #dcdc29;">
+                                    <td style="text-align: center;">jieba</td>
+                                    <td style="text-align: right;"><span class="math inline">0.6985</span></td>
+                                    <td style="text-align: right;"><span class="math inline">0.1180556 (negligible)</span></td>
+                                    </tr>
+                                    <tr class="even" style="background-color: #ff1f1f;">
+                                    <td style="text-align: center;">Mycat-Server</td>
+                                    <td style="text-align: right;"><span class="math inline">1</span></td>
+                                    <td style="text-align: right;"><span class="math inline">1 (large)</span></td>
+                                    </tr>
+                                    <tr class="odd" style="background-color: #ff1f1f;">
+                                    <td style="text-align: center;">pybrain</td>
+                                    <td style="text-align: right;"><span class="math inline">0.9913</span></td>
+                                    <td style="text-align: right;"><span class="math inline">0.5138889 (large)</span></td>
+                                    </tr>
+                                    <tr class="even" style="background-color: #0cc50c;">
+                                    <td style="text-align: center;">jstorm</td>
+                                    <td style="text-align: right;"><span class="math inline">1.439e-05</span></td>
+                                    <td style="text-align: right;"><span class="math inline">-1 (large)</span></td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                                <div style="width: 49%; float: right;">
+                                        <table class="table table-striped table-condensed">
+                                        <thead>
+                                        <tr class="odd" style="background-color: gray;">
+                                        <td style="text-align: center;"><strong>CI projects</strong></td>
+                                        <td style="text-align: right;"><strong>MWW <span class="math inline">p-value</span></strong></td>
+                                        <td style="text-align: right;"><strong>Cliff’s delta</strong></td>
+                                        </tr>
+                                        <tr class="even" style="background-color: #0cc50c;">
+                                        <td style="text-align: center;">cesium</td>
+                                        <td style="text-align: right;"><span class="math inline">0.0002361</span></td>
+                                        <td style="text-align: right;"><span class="math inline">-0.8472222 (large)</span></td>
+                                        </tr>
+                                        <tr class="odd" style="background-color: #0cc50c;">
+                                        <td style="text-align: center;">underscore</td>
+                                        <td style="text-align: right;"><span class="math inline">6.095e-05</span></td>
+                                        <td style="text-align: right;"><span class="math inline">-0.9166667 (large)</span></td>
+                                        </tr>
+                                        <tr class="even" style="background-color: #ff1f1f;">
+                                        <td style="text-align: center;">pdf.js</td>
+                                        <td style="text-align: right;"><span class="math inline">0.8225</span></td>
+                                        <td style="text-align: right;"><span class="math inline">0.2152778 (small)</span></td>
+                                        </tr>
+                                        <tr class="odd" style="background-color: #0cc50c;">
+                                        <td style="text-align: center;">picasso</td>
+                                        <td style="text-align: right;"><span class="math inline">4.816e-05</span></td>
+                                        <td style="text-align: right;"><span class="math inline">-0.9444444 (large)</span></td>
+                                        </tr>
+                                        <tr class="even" style="background-color: #dcdc29;">
+                                        <td style="text-align: center;">mrjob</td>
+                                        <td style="text-align: right;"><span class="math inline">0.3313</span></td>
+                                        <td style="text-align: right;"><span class="math inline">-0.1111111 (negligible)</span></td>
+                                        </tr>
+                                        <tr class="odd" style="background-color: #0cc50c;">
+                                        <td style="text-align: center;">dropwizard</td>
+                                        <td style="text-align: right;"><span class="math inline">1.759e-05</span></td>
+                                        <td style="text-align: right;"><span class="math inline">-1 (large)</span></td>
+                                        </tr>
+                                        <tr class="even" style="background-color: #0cc50c;">
+                                        <td style="text-align: center;">scipy</td>
+                                        <td style="text-align: right;"><span class="math inline">0.01871</span></td>
+                                        <td style="text-align: right;"><span class="math inline">-0.5069444 (large)</span></td>
+                                        </tr>
+                                        <tr class="odd" style="background-color: #dcdc29;">
+                                        <td style="text-align: center;">cython</td>
+                                        <td style="text-align: right;"><span class="math inline">0.5116</span></td>
+                                        <td style="text-align: right;"><span class="math inline">0 (negligible)</span></td>
+                                        </tr>
+                                        <tr class="even" style="background-color: #0cc50c;">
+                                        <td style="text-align: center;">robolectric</td>
+                                        <td style="text-align: right;"><span class="math inline">1.815e-05</span></td>
+                                        <td style="text-align: right;"><span class="math inline">-1 (large)</span></td>
+                                        </tr>
+                                        <tr class="odd" style="background-color: #dcdc29;">
+                                        <td style="text-align: center;">sympy</td>
+                                        <td style="text-align: right;"><span class="math inline">0.3322</span></td>
+                                        <td style="text-align: right;"><span class="math inline">-0.1111111 (negligible)</span></td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                </div>
+                            </div>
+                            <br style="clear: both;">
+                            <div >
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
     <div class="portfolio-modal modal fade" id="rq1-mww-test-and-cliff-delta-results" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -471,7 +731,7 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div> -->  
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -562,9 +822,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() {  
-          var modals = ['#studied-projects', '#rq1-mww-test-and-cliff-delta-results',
-                        '#rq2-mww-test-and-cliff-delta-results', '#rq3-r-squared-and-optimism', 
-                        '#rq3-variables-explanatory-power'];
+          var modals = ['#projects-coverage-tests', '#models-details'];
           if (window.location.hash && ~modals.indexOf(window.location.hash)) {
              $(window.location.hash).modal();
           }
